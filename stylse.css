@@ -20,11 +20,13 @@
 
 .banner-left {
     padding-left: 150px;
+    flex: 1;
 }
 
 .banner-left h2 {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 70px;
+    line-height: 70px;
 
 }
 
@@ -45,11 +47,15 @@
     font-size: 20px;
     padding: 15px 25px;
 }
-
+img{
+    max-width: 100% ;
+}
 .banner-right img {
     display: block;
 }
-
+.banner-right{
+    flex: 1;
+}
 .upcoming-matches {
     display: flex;
     
@@ -128,4 +134,10 @@
     .upcoming-matches-right{
         grid-template-columns: repeat(2, 1fr);
     }
+    .banner-left h2 {
+    
+    font-size: 50px;
+    line-height: 50px;
+
+}
 }
