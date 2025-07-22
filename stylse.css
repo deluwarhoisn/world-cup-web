@@ -86,4 +86,22 @@
 }
 .upcoming-matches-right .card img{
     height: 180px;
+    border-radius: 10px 10px 0px 0px
+}
+.upcoming-matches-right .card .btn{
+    background-color: white;
+    color: black;
+    border:2px solid black;
+    padding: 8px 17px;
+    margin-top: 10px;
+}
+.upcoming-matches-right .card h2{
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.card-bottom{
+    display: flex;
+    gap: 120px;
+    color: black;
 }
