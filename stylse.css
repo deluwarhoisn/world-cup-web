@@ -32,7 +32,7 @@ font-size: 70px;
     color: rgb(255, 255, 255);
     margin: 30px 0px;
 }
-.banner-left button{
+.btn{
  background-color: rgb(221, 0, 0);
  color: white;
  width: 187px;
@@ -44,4 +44,18 @@ font-size: 70px;
 }
 .banner-right img{
 display: block;
+}
+
+.upcoming-matches{
+    display: flex;
+    background-color: green;
+    padding: 50px 0;
+
+}
+.upcoming-matches-left{
+    background-color: black;
+    flex: 1;
+}
+.upcoming-matches-right{
+    background-color: orange;
 }
