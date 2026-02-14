@@ -7,8 +7,10 @@
 .container {
     max-width: 1280px;
     margin: auto;
+    padding: 0 15px;
 }
 
+/* Banner */
 .banner {
     display: flex;
     align-items: center;
@@ -16,10 +18,11 @@
     color: white;
     border-radius: 10px;
     margin: 50px auto;
+    padding: 40px;
+    gap: 30px;
 }
 
 .banner-left {
-    padding-left: 150px;
     flex: 1;
 }
 
@@ -27,41 +30,41 @@
     font-weight: 600;
     font-size: 70px;
     line-height: 70px;
-
 }
 
 .banner-left p {
-    font-weight: 400;
     font-size: 16px;
-    color: rgb(255, 255, 255);
-    margin: 30px 0px;
+    margin: 30px 0;
 }
 
+/* Button */
 .btn {
     background-color: rgb(221, 0, 0);
     color: white;
-    width: 187px;
-    height: 56px;
     border-radius: 8px;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     padding: 15px 25px;
+    cursor: pointer;
 }
-img{
-    max-width: 100% ;
+
+img {
+    max-width: 100%;
 }
+
+.banner-right {
+    flex: 1;
+}
+
 .banner-right img {
     display: block;
 }
-.banner-right{
-    flex: 1;
-}
+
+/* Matches */
 .upcoming-matches {
     display: flex;
-    
     padding: 50px 0;
-    gap: 10px;
-
+    gap: 20px;
 }
 
 .upcoming-matches-left {
@@ -75,85 +78,108 @@ img{
     height: fit-content;
 }
 
-.upcoming-matches-right {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
 .upcoming-matches-left .btn:nth-child(1),
 .upcoming-matches-left .btn:nth-child(2) {
     background-color: white;
     color: black;
 }
 
-.upcoming-matches-left .btn {}
-
-.upcoming-matches-right .card {
-
+/* Grid */
+.upcoming-matches-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
-.upcoming-matches-right .card img{
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card img {
     height: 180px;
-    border-radius: 10px 10px 0px 0px
+    width: 100%;
+    object-fit: cover;
 }
-.upcoming-matches-right .card .btn{
+
+.card-box {
+    padding: 15px;
+}
+
+.card .btn {
     background-color: white;
     color: black;
-    border:2px solid black;
-    padding: 8px 17px;
-    margin-top: 10px;
-}
-.upcoming-matches-right .card h2{
-    margin: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-}
-.card-bottom{
-    display: flex;
-    gap: 120px;
-    color: black;
-}
-.card-box{
-    padding: 10px;
+    border: 2px solid black;
+    padding: 6px 15px;
+    font-size: 14px;
 }
 
- /* media quary mobil */
+.card h2 {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+/* ======================
+   MOBILE
+====================== */
 @media (max-width:768px) {
-    .banner{
+
+    .banner {
         flex-direction: column;
         text-align: center;
     }
-    .banner .banner-left{
-        margin-bottom: 20px;
-        padding-left: 0;
-        padding-top: 20px;
+
+    .banner-left h2 {
+        font-size: 40px;
+        line-height: 45px;
     }
 
- 
-}
-/* media quary laptop vs tab */
-@media (max-width:992px){
-    .upcoming-matches{
+    .upcoming-matches {
         flex-direction: column;
     }
-    .upcoming-matches-left{
+
+    .upcoming-matches-left {
         flex-direction: row;
         width: 100%;
         background-color: transparent;
-        
+        padding: 0;
     }
-    .upcoming-matches-left > *{
-        flex: 1;
-    }
-    .upcoming-matches .btn{
-        border: 1px solid white;
-    }
-    .upcoming-matches-right{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .banner-left h2 {
-    
-    font-size: 50px;
-    line-height: 50px;
 
+    .upcoming-matches-left .btn{
+        flex:1;
+        border:1px solid black;
+    }
+
+    .upcoming-matches-right {
+        grid-template-columns: 1fr;
+    }
 }
+
+/* ======================
+   TABLET
+====================== */
+@media (max-width:992px) {
+
+    .upcoming-matches-right {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .banner-left h2 {
+        font-size: 50px;
+        line-height: 55px;
+    }
 }
